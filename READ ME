@@ -1,0 +1,72 @@
+
+Page
+2
+of 2
+University of Santo Tomas – Faculty of Engineering
+Electronics Engineering Department
+ECE 2112: Advanced Computer Programming and Algorithms
+EXPERIMENT 2: NUMERICAL PYTHON (NUMPY)
+Name: Surname, First Name M.I. Date Submitted:
+Section: 2ECE-
+I. Intended Learning Outcomes
+At the end of this laboratory activity, the student should be able to:
+1. create and reshape NumPy arrays using appropriate NumPy functions;
+2. perform vectorized numerical operations on an ndarray;
+3. compute array statistics and use Boolean conditions to select elements; and
+4. save computed NumPy arrays as .npy files.
+II. Instructions
+Write Python code in a Jupyter Notebook to solve each problem. Import NumPy as np. Place each
+problem in a separate, clearly labeled section of the notebook.
+• Use NumPy array operations. Do not use Python loops or list comprehensions to perform the
+required numerical calculations or filtering.
+• Do not hard-code a computed result. Construct every result from the array specified in the problem.
+• Use the exact variable and output filenames stated below.
+• Display the requested checks in the notebook before saving each result.
+• Do not use libraries other than NumPy.
+III. Programming Problems
+A. REPRODUCIBLE NORMALIZATION PROBLEM
+Create a reproducible random 5 × 5 integer ndarray named X. Use the following two statements before
+performing any calculation:
+np.random.seed(2112)
+X = np.random.randint(10, 101, size=(5, 5))
+Normalize the complete array using
+Z = X − ¯x
+σ ,
+where ¯x is the mean of all 25 elements and σ is their population standard deviation as returned by
+NumPy’s default std() call. Store the normalized array in X normalized.
+Required checks: Display X, X normalized, its mean, and its standard deviation. Up to floating-
+point rounding, the normalized mean must be 0 and the normalized standard deviation must be 1.
+Save the normalized array as:
+X_normalized.npy
+B. CUBES DIVISIBLE BY 4 PROBLEM
+Using NumPy, create the first 100 positive integers, cube every element, and reshape the result into a
+10 × 10 ndarray named C. Thus, C begins with 13 and ends with 1003.
+Page 1 — Experiment No. 2
+Use a Boolean condition on C to obtain every cubed value divisible by 4. Store the selected values in
+div by 4. Preserve NumPy’s normal row-major selection order.
+Required checks: Display the shape of C, the array div by 4, and the number of selected elements.
+A correct solution has 50 selected elements; the first is 8 and the last is 1,000,000.
+Save the selected array as:
+div_by_4.npy
+C. ABOVE-MEAN SQUARES PROBLEM
+Create a 6 × 6 ndarray named S containing the squares of the first 36 positive integers in increasing
+row-major order. Compute the mean of all elements of S and store it in S mean. Then use Boolean
+filtering to select only the elements strictly greater than S mean. Store these values in above mean.
+Required checks: Display S, S mean, above mean, and the number of selected elements. A correct
+solution has 15 selected elements; the first is 484 and the last is 1296.
+Save the selected array as:
+above_mean.npy
+IV. Submission Requirements
+Submit one Jupyter Notebook file (.ipynb) and the three generated NumPy files: X normalized.npy,
+div by 4.npy, and above mean.npy. The notebook must contain your name and section, clearly
+labeled solutions for Problems A–C, and executed cells showing all required checks. It must execute
+from beginning to end without errors.
+V. Grading
+Component Points
+Reproducible Normalization Problem 30
+Cubes Divisible by 4 Problem 30
+Above-Mean Squares Problem 30
+Code readability, organization, and required checks 10
+Total 100
+End of Experiment 2
+Page 2 — Experiment No. 2
